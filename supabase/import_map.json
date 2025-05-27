@@ -1,0 +1,6 @@
+{
+  "imports": {
+    "$std/": "https://deno.land/std@0.168.0/",
+    "$twilio/": "npm:twilio@4.14.0"
+  }
+}
