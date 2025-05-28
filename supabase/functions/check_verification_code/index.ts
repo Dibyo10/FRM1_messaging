@@ -12,7 +12,10 @@ serve(async (req) => {
       Authorization: `Basic ${btoa(`${accountSid}:${authToken}`)}`,
       'Content-Type': 'application/x-www-form-urlencoded'
     },
-    body: `To=${phoneNumber}&Code=${code}`
+    body: new URLSearchParams({
+      To: phoneNumber,
+      Code: code
+    })
   })
 
   const data = await res.json()
